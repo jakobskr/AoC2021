@@ -42,8 +42,6 @@ def part2(counter, gamma, epsilon):
         c = 0
         for numb in oxyPort:
             c += (numb & (1 << shiftRate)) >> (shiftRate)
-        print(oxyPort)
-        print("c > oxyLen / 2 ", c,  oxyLen / 2)
 
         for numb in oxyPort:
             if c >= oxyLen / 2: #keep 1s
@@ -54,7 +52,6 @@ def part2(counter, gamma, epsilon):
                     tempList.append(numb)
 
         oxyPort = tempList[:]
-        print("after ", i , " bit:", tempList, c)
 
     print("oxyVAL = {:05b}".format(oxyPort[0]))
 
