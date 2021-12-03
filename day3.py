@@ -69,8 +69,6 @@ def part2(counter, gamma, epsilon):
         c = 0
         for numb in carPort:
             c += (numb & (1 << shiftRate)) >> (shiftRate)
-        print(carPort)
-        print("c > carLen / 2 ", c,  carLen / 2)
 
         for numb in carPort:
             if c >= carLen / 2: #keep 1s
